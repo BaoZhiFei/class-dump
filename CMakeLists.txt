@@ -3,6 +3,9 @@ cmake_minimum_required(VERSION 3.24)
 project(class-dump LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD 23)
+set(CMAKE_CXX_STANDARD_REQUIRED YES)
+set(CMAKE_CXX_EXTENSIONS NO)
+set(CMAKE_VERBOSE_MAKEFILE ON)
 
 include(FetchContent)
 
