@@ -7,6 +7,8 @@ set(CMAKE_CXX_STANDARD_REQUIRED YES)
 set(CMAKE_CXX_EXTENSIONS NO)
 set(CMAKE_VERBOSE_MAKEFILE ON)
 
+add_compile_options(-fno-exceptions -fno-rtti -Wall -Wextra -pedantic)
+
 include(FetchContent)
 
 FetchContent_Declare(GSL
