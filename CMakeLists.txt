@@ -6,18 +6,13 @@ set(CMAKE_CXX_STANDARD 23)
 set(CMAKE_CXX_STANDARD_REQUIRED YES)
 set(CMAKE_CXX_EXTENSIONS NO)
 set(CMAKE_VERBOSE_MAKEFILE ON)
+set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${CMAKE_CURRENT_SOURCE_DIR}/cmake/modules)
 
 add_compile_options(-fno-exceptions -fno-rtti -Wall -Wextra -pedantic)
 
 include(FetchContent)
 
-FetchContent_Declare(GSL
-        GIT_REPOSITORY "https://github.com/microsoft/GSL"
-        GIT_TAG "v4.0.0"
-        GIT_SHALLOW ON
-        )
-
-FetchContent_MakeAvailable(GSL)
+find_package(GSL REQUIRED)
 
 add_executable(${PROJECT_NAME} main.cpp)
 
